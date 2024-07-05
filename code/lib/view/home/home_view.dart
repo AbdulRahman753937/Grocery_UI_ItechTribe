@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:groceries/res/colors/app_color.dart';
 import 'package:groceries/view/login/login_view.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -59,27 +58,28 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(
                     height: 35,
                   ),
-                  Container(
-                    width: 320,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Color.fromRGBO(83, 177, 117, 1),
-                    ),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Get.to(LoginView());
-                      },
-                      child: Text(
-                        'Get Started',
-                        style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold),
+                  GestureDetector(
+                    onTap: (){
+                      Get.to(LoginView());
+                    },
+                    child: Container(
+                      width: 320,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Color.fromRGBO(83, 177, 117, 1),
                       ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: (AppColor.greencolor),
-                        foregroundColor: (Colors.white),
+                      child: Center(
+                        child: Text(
+                          
+                            'Get Started',
+                            style: TextStyle(
+                              
+                                fontFamily: 'Montserrat',
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
                       ),
                     ),
                   ),
