@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:groceries/view/login/login_view.dart';
+import 'package:groceries/view/select_location.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

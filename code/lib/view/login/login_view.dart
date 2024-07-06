@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:groceries/res/colors/app_color.dart';
 import 'package:groceries/view/home/home_view.dart';
-import 'package:groceries/view/login/login_view2.dart';
+import 'package:groceries/view/phone_number.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
 class LoginView extends StatefulWidget {
@@ -18,8 +18,8 @@ class LoginViewState extends State<LoginView> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SingleChildScrollView(
-          child: Column(
-                children: [
+      child: Column(
+        children: [
           Image.asset(
             'assets/images/Screen2_background.png',
             fit: BoxFit.cover, // Use BoxFit to cover the entire screen
@@ -35,45 +35,41 @@ class LoginViewState extends State<LoginView> {
           ),
           Container(
             margin: EdgeInsets.only(top: 20, left: 20, bottom: 30, right: 20),
-            child: 
-GestureDetector(
-  onTap: () {
-    Get.to(LoginView2());
-  },
-  child: IntlPhoneField(
-    inputFormatters: [
-      LengthLimitingTextInputFormatter(10), // Adjusted for 10 digits
-      FilteringTextInputFormatter.digitsOnly,
-    ],
-    keyboardType: TextInputType.phone,
-    decoration: InputDecoration(
-      contentPadding: EdgeInsets.only(top: 11),
-      border: UnderlineInputBorder(
-        borderSide: BorderSide(color: Colors.grey, width: 1),
-      ),
-      enabledBorder: UnderlineInputBorder(
-        borderSide: const BorderSide(
-          color: Colors.grey,
-          width: 0.5,
-        ),
-      ),
-    ),
-    initialCountryCode: 'PK',
-    onChanged: (phone) {
-          print(phone.completeNumber);
-          if () {
-            Get.to(LoginView2());
-          }
-        },
-    validator: (value) {
-      if (value == null) {
-        return "Please enter your PhoneNo";
-      }
-      return null;
-    },
-  ),
-),
-
+            child: GestureDetector(
+              onTap: () {
+                Get.to(MyPhone());
+              },
+              child: IntlPhoneField(
+                inputFormatters: [
+                  LengthLimitingTextInputFormatter(
+                      10), // Adjusted for 10 digits
+                  FilteringTextInputFormatter.digitsOnly,
+                ],
+                keyboardType: TextInputType.phone,
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.only(top: 11),
+                  border: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey, width: 1),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: const BorderSide(
+                      color: Colors.grey,
+                      width: 0.5,
+                    ),
+                  ),
+                ),
+                initialCountryCode: 'PK',
+                onTap: () {
+                  Get.to(MyPhone());
+                },
+                validator: (value) {
+                  if (value == null) {
+                    return "Please enter your PhoneNo";
+                  }
+                  return null;
+                },
+              ),
+            ),
           ),
           Container(
               margin: EdgeInsets.only(bottom: 30),
@@ -92,7 +88,7 @@ GestureDetector(
                   Padding(
                     padding: const EdgeInsets.only(right: 35),
                     child: GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         Get.to(HomeScreen());
                       },
                       child: TextButton(
@@ -115,8 +111,10 @@ GestureDetector(
                   ),
                 ],
               )),
-              SizedBox(height: 15,),
-              Container(
+          SizedBox(
+            height: 15,
+          ),
+          Container(
               width: 320,
               height: 60,
               decoration: BoxDecoration(
@@ -148,10 +146,11 @@ GestureDetector(
                   ),
                 ],
               )),
-              SizedBox(height: 25,)
-                
-                ],
-              ),
-        ));
+          SizedBox(
+            height: 25,
+          )
+        ],
+      ),
+    ));
   }
 }
