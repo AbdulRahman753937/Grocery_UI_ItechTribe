@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:groceries/res/colors/app_color.dart';
+import 'package:groceries/view/widgets/button_creator.dart';
+import 'package:groceries/view/login_screen.dart';
 
 class SelectLocation extends StatefulWidget {
   const SelectLocation({super.key});
@@ -100,32 +102,11 @@ class _SelectLocationState extends State<SelectLocation> {
                       }).toList(),
                     ),
                   ),
-                  GestureDetector(
-                      onTap: (){
-                        // getX next page here/////////////////////////////////////
-                      },
-                      child: Container(
-                        margin: EdgeInsets.only(top: 30),
-                        width: 320,
-                        height: 60,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Color.fromRGBO(83, 177, 117, 1),
-                        ),
-                        child: Center(
-                          child: Text(
-                            
-                              'Submit',
-                              style: TextStyle(
-                                
-                                  fontFamily: 'Montserrat',
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white),
-                            ),
-                        ),
-                      ),
-                    ),
+                  SizedBox(height: 20,),
+                  ButtonCreator.createButton('Submit', AppColor.greencolor, (){
+                    Get.to(LoginScreen());
+                  }),
+                  SizedBox(height: 20,)
                
                 ],
               )

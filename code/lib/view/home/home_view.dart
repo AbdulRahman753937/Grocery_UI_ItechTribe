@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:groceries/res/colors/app_color.dart';
+import 'package:groceries/view/widgets/button_creator.dart';
 import 'package:groceries/view/login/login_view.dart';
-import 'package:groceries/view/select_location.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeView extends StatelessWidget {
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
                     'Welcome\nto our store',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontFamily: 'Montserrat',
+                        fontFamily: 'Sen',
                         fontSize: 52,
                         color: Colors.white,
                         fontWeight: FontWeight.w900),
@@ -59,31 +59,9 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(
                     height: 35,
                   ),
-                  GestureDetector(
-                    onTap: (){
-                      Get.to(LoginView());
-                    },
-                    child: Container(
-                      width: 320,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Color.fromRGBO(83, 177, 117, 1),
-                      ),
-                      child: Center(
-                        child: Text(
-                          
-                            'Get Started',
-                            style: TextStyle(
-                              
-                                fontFamily: 'Montserrat',
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          ),
-                      ),
-                    ),
-                  ),
+                  ButtonCreator.createButton('Get Started', AppColor.greencolor, () {
+                    Get.to(LoginView());
+                  }),
                   SizedBox(
                     height: 85,
                   )

@@ -10,6 +10,6 @@ class SplashController extends GetxController{
 
   Future navigateToHome() async {
     await Future.delayed(const Duration(seconds: 3));
-    Get.to(()=> HomeScreen());
+    Get.to(()=> HomeView());
   }
 }

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:groceries/res/colors/app_color.dart';
-import 'package:groceries/view/home/home_view.dart';
 import 'package:groceries/view/phone_number.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
@@ -89,7 +88,7 @@ class LoginViewState extends State<LoginView> {
                     padding: const EdgeInsets.only(right: 35),
                     child: GestureDetector(
                       onTap: () {
-                        Get.to(HomeScreen());
+                        
                       },
                       child: TextButton(
                         onPressed: () {

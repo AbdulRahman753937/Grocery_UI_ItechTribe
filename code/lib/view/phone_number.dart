@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:groceries/view/verification.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
@@ -42,7 +41,7 @@ class _MyPhoneState extends State<MyPhone> {
                 ),
                 Text(
                   'Mobile Number',
-                  style: TextStyle(fontSize: 12, fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 12, fontFamily: 'Montserrat', fontWeight: FontWeight.w900),
                 ),
                 Container(
                   margin:

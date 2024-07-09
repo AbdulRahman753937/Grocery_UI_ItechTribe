@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/res/colors/app_color.dart';
-import 'package:groceries/view/splash_controller.dart';
+import 'package:groceries/controllers/splash_controller.dart';
 
 
 class SplashScreen extends StatelessWidget {
