@@ -1,33 +1,34 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:groceries/components/card.dart';
+import 'package:groceries/components/groceries_image.dart';
 import 'package:groceries/res/colors/app_color.dart';
+import 'package:groceries/view/login_screen.dart';
 import 'package:groceries/view/widgets/main_header.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
-  
-  
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
-   var jsonList;
+  var jsonList;
 
   void getData() async {
-    try{
+    try {
       var response = await Dio().get('');
-      if(response.statusCode == 200){
+      if (response.statusCode == 200) {
         setState(() {
           jsonList = response.data["superheroes"] as List;
         });
-
-      }else{
+      } else {
         print('Something went wrong');
       }
-    }catch(e){
+    } catch (e) {
       print(e);
     }
   }
@@ -70,57 +71,310 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: 20,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Exclusive Offer',
-                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'Exclusive Offer',
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Text(
+                      'See all',
+                      style: TextStyle(
+                          color: AppColor.greencolor,
+                          fontWeight: FontWeight.w500),
                     ),
-                    GestureDetector(
-                      onTap: () {},
-                      child: Text(
-                        'See all',
-                        style: TextStyle(
-                            color: AppColor.greencolor,
-                            fontWeight: FontWeight.w500),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ProductCard(
+                        image: 'assets/images/bnana.png',
+                        title: 'Organic Bananas',
+                        subtitle: '7pcs, Priceg',
+                        price: '\$4.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    ProductCard(
+                        image: 'assets/images/apple.png',
+                        title: 'Fresh Apples',
+                        subtitle: '9pcs, Priceg',
+                        price: '\$7.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    ProductCard(
+                        image: 'assets/images/bnana.png',
+                        title: 'Organic Bananas',
+                        subtitle: '7pcs, Priceg',
+                        price: '\$4.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    ProductCard(
+                        image: 'assets/images/apple.png',
+                        title: 'Fresh Apples',
+                        subtitle: '9pcs, Priceg',
+                        price: '\$7.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    ProductCard(
+                        image: 'assets/images/bnana.png',
+                        title: 'Organic Bananas',
+                        subtitle: '7pcs, Priceg',
+                        price: '\$4.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    ProductCard(
+                        image: 'assets/images/apple.png',
+                        title: 'Fresh Apples',
+                        subtitle: '9pcs, Priceg',
+                        price: '\$7.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'Best Selling',
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Text(
+                      'See all',
+                      style: TextStyle(
+                          color: AppColor.greencolor,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ProductCard(
+                        image: 'assets/images/bnana.png',
+                        title: 'Organic Bananas',
+                        subtitle: '7pcs, Priceg',
+                        price: '\$4.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    ProductCard(
+                        image: 'assets/images/apple.png',
+                        title: 'Fresh Apples',
+                        subtitle: '9pcs, Priceg',
+                        price: '\$7.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    ProductCard(
+                        image: 'assets/images/bnana.png',
+                        title: 'Organic Bananas',
+                        subtitle: '7pcs, Priceg',
+                        price: '\$4.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    ProductCard(
+                        image: 'assets/images/apple.png',
+                        title: 'Fresh Apples',
+                        subtitle: '9pcs, Priceg',
+                        price: '\$7.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    ProductCard(
+                        image: 'assets/images/bnana.png',
+                        title: 'Organic Bananas',
+                        subtitle: '7pcs, Priceg',
+                        price: '\$4.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    ProductCard(
+                        image: 'assets/images/apple.png',
+                        title: 'Fresh Apples',
+                        subtitle: '9pcs, Priceg',
+                        price: '\$7.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'Groceries',
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Text(
+                      'See all',
+                      style: TextStyle(
+                          color: AppColor.greencolor,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(right: 10),
+                      width: 250,
+                      height: 105,
+                      child: Image.asset(
+                        'assets/images/Pulses.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 10),
+                      width: 250,
+                      height: 105,
+                      child: Image.asset(
+                        'assets/images/Rice.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 10),
+                      width: 250,
+                      height: 105,
+                      child: Image.asset(
+                        'assets/images/Pulses.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 10),
+                      width: 250,
+                      height: 105,
+                      child: Image.asset(
+                        'assets/images/Rice.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 10),
+                      width: 250,
+                      height: 105,
+                      child: Image.asset(
+                        'assets/images/Pulses.png',
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ],
                 ),
               ),
               SizedBox(height: 20,),
-              SizedBox(
-                height: 150, // Set a fixed height for the horizontal list
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Card(
-                      child: Column(
-                        children: [
-                          Image.asset('assets/images/bnana.png'),
-                          ListTile(
-                            title: Text('Organic Bananas'),
-                            subtitle: Text('7pcs, Priceg'),
-                          ),
-                          Row(children: [
-                            Text("\$4.99"),
-                            Image.asset('assets/icons/add.png')
-                          ],)
-                        ],
-                      )
-                    );
-                  },
-                  itemCount: jsonList == null?0:jsonList.length,
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ProductCard(
+                        image: 'assets/images/beef.png',
+                        title: 'Beef',
+                        subtitle: '1kg, Priceg',
+                        price: '\$4.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    ProductCard(
+                        image: 'assets/images/broiler.png',
+                        title: 'Broiler',
+                        subtitle: '2kg, Priceg',
+                        price: '\$7.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    
+                    ProductCard(
+                        image: 'assets/images/beef.png',
+                        title: 'Beef',
+                        subtitle: '1kg, Priceg',
+                        price: '\$4.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    ProductCard(
+                        image: 'assets/images/broiler.png',
+                        title: 'Broiler',
+                        subtitle: '2kg, Priceg',
+                        price: '\$7.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    
+                    ProductCard(
+                        image: 'assets/images/beef.png',
+                        title: 'Beef',
+                        subtitle: '1kg, Priceg',
+                        price: '\$4.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    ProductCard(
+                        image: 'assets/images/broiler.png',
+                        title: 'Broiler',
+                        subtitle: '2kg, Priceg',
+                        price: '\$7.99',
+                        onTap: () {
+                          Get.to(LoginScreen());
+                        }),
+                    
+                  ],
                 ),
               ),
+              SizedBox(height: 20,)
             ],
           ),
         ),
       ),
+      // bottomNavigationBar: BottomNavigationBar(items: const[
+      //   BottomNavigationBarItem(
+      //     icon: Icon(Icons.home),
+      //     label: 'Home'
+      //     )
+      // ]),
     );
   }
 }
