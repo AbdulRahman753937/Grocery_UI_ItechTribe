@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/res/colors/app_color.dart';
-import 'package:groceries/view/widgets/button_creator.dart';
-import 'package:groceries/view/login/login_view.dart';
+import 'package:groceries/components/button_creator.dart';
+import 'package:groceries/view/login_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

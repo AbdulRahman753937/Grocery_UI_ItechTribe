@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:groceries/res/colors/app_color.dart';
 import 'package:groceries/view/home_screen.dart';
 import 'package:groceries/view/navigation_bar.dart';
-import 'package:groceries/view/widgets/button_creator.dart';
+import 'package:groceries/components/button_creator.dart';
 import 'package:groceries/view/sign_up_screen.dart';
 import 'package:http/http.dart';
 

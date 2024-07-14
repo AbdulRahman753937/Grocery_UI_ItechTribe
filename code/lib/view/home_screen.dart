@@ -7,7 +7,7 @@ import 'package:groceries/components/groceries_image.dart';
 import 'package:groceries/res/colors/app_color.dart';
 import 'package:groceries/view/login_screen.dart';
 import 'package:groceries/view/product_detail.dart';
-import 'package:groceries/view/widgets/main_header.dart';
+import 'package:groceries/components/main_header.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: 10,
               ),
-              MainHeader(),
+              MainHeader(onSearchChanged: (String value) {  },),
               SizedBox(
                 height: 10,
               ),

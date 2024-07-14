@@ -19,11 +19,11 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(right: 10),
-      height: 230,
+      height: 240,
       width: 175,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey.shade500),
-        color: Colors.grey.shade200,
+        color: Colors.grey.shade100,
         borderRadius: BorderRadius.circular(15),
       ),
       child: Padding(

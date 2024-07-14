@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:groceries/view/home/home_view.dart';
+import 'package:groceries/view/Onboarding.dart';
 
 class SplashController extends GetxController{
   @override

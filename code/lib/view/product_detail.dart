@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/controllers/item_controller.dart';
 import 'package:groceries/res/colors/app_color.dart';
-import 'package:groceries/view/widgets/button_creator.dart';
+import 'package:groceries/components/button_creator.dart';
 
 class ProductDetail extends StatefulWidget {
   const ProductDetail({super.key});
