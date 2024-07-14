@@ -86,9 +86,9 @@ flutter:
         - asset: fonts/Montserrat-VariableFont_wght.ttf
         # - asset: fonts/Gilroy-ExtraBold.ttf
   #         style: italic
-    - family: Sen
+    - family: MyFlutterApp
       fonts:
-        - asset: fonts/Sen-VariableFont_wght.ttf
+        - asset: fonts/MyFlutterApp.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

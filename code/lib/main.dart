@@ -4,6 +4,7 @@ import 'package:groceries/components/card.dart';
 import 'package:groceries/view/home/home_view.dart';
 import 'package:groceries/view/home_screen.dart';
 import 'package:groceries/view/login_screen.dart';
+import 'package:groceries/view/navigation_bar.dart';
 import 'package:groceries/view/splash_screen.dart';
 
 void main() {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashScreen()
+      home: NavigationBaar()
     );
   }
 }
