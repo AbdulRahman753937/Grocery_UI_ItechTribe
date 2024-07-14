@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:groceries/view/explore.dart';
 import 'package:groceries/view/home_screen.dart';
 import 'package:groceries/view/my_flutter_app_icons.dart';
 
@@ -17,12 +18,7 @@ class _ExploreState extends State<NavigationBaar> {
 
   final screens = [
     HomeScreen(),
-    Center(
-      child: Text(
-        'Explore',
-        style: TextStyle(fontSize: 72),
-      ),
-    ),
+    Explore(),
     Center(
       child: Text(
         'Cart',

@@ -6,6 +6,7 @@ import 'package:groceries/components/card.dart';
 import 'package:groceries/components/groceries_image.dart';
 import 'package:groceries/res/colors/app_color.dart';
 import 'package:groceries/view/login_screen.dart';
+import 'package:groceries/view/product_detail.dart';
 import 'package:groceries/view/widgets/main_header.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -103,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '7pcs, Priceg',
                         price: '\$4.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     ProductCard(
                         image: 'assets/images/apple.png',
@@ -111,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '9pcs, Priceg',
                         price: '\$7.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     ProductCard(
                         image: 'assets/images/bnana.png',
@@ -119,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '7pcs, Priceg',
                         price: '\$4.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     ProductCard(
                         image: 'assets/images/apple.png',
@@ -127,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '9pcs, Priceg',
                         price: '\$7.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     ProductCard(
                         image: 'assets/images/bnana.png',
@@ -135,7 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '7pcs, Priceg',
                         price: '\$4.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     ProductCard(
                         image: 'assets/images/apple.png',
@@ -143,7 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '9pcs, Priceg',
                         price: '\$7.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                   ],
                 ),
@@ -183,7 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '7pcs, Priceg',
                         price: '\$4.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     ProductCard(
                         image: 'assets/images/apple.png',
@@ -191,7 +192,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '9pcs, Priceg',
                         price: '\$7.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     ProductCard(
                         image: 'assets/images/bnana.png',
@@ -199,7 +200,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '7pcs, Priceg',
                         price: '\$4.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     ProductCard(
                         image: 'assets/images/apple.png',
@@ -207,7 +208,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '9pcs, Priceg',
                         price: '\$7.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     ProductCard(
                         image: 'assets/images/bnana.png',
@@ -215,7 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '7pcs, Priceg',
                         price: '\$4.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     ProductCard(
                         image: 'assets/images/apple.png',
@@ -223,7 +224,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '9pcs, Priceg',
                         price: '\$7.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                   ],
                 ),
@@ -316,7 +317,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '1kg, Priceg',
                         price: '\$4.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     ProductCard(
                         image: 'assets/images/broiler.png',
@@ -324,7 +325,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '2kg, Priceg',
                         price: '\$7.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     
                     ProductCard(
@@ -333,7 +334,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '1kg, Priceg',
                         price: '\$4.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     ProductCard(
                         image: 'assets/images/broiler.png',
@@ -341,7 +342,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '2kg, Priceg',
                         price: '\$7.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     
                     ProductCard(
@@ -350,7 +351,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '1kg, Priceg',
                         price: '\$4.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     ProductCard(
                         image: 'assets/images/broiler.png',
@@ -358,7 +359,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         subtitle: '2kg, Priceg',
                         price: '\$7.99',
                         onTap: () {
-                          Get.to(LoginScreen());
+                          Get.to(ProductDetail());
                         }),
                     
                   ],
