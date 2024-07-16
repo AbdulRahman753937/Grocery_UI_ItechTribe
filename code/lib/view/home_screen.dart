@@ -1,11 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:groceries/components/card.dart';
-import 'package:groceries/components/groceries_image.dart';
 import 'package:groceries/res/colors/app_color.dart';
-import 'package:groceries/view/login_screen.dart';
 import 'package:groceries/view/product_detail.dart';
 import 'package:groceries/components/main_header.dart';
 

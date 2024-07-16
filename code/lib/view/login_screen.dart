@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
         print(data['token']);
         print('Logged in successfully');
 
-        Get.to(NavigationBaar());
+        Get.to(NavigationBaar(initialIndex: 0,));
       } else {
         print('failed');
       }

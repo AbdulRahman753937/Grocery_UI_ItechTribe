@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:groceries/res/colors/app_color.dart';
 
+// ignore: must_be_immutable
 class CustomCheckBox extends StatefulWidget {
 
   double? size;

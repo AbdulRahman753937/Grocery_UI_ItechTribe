@@ -4,14 +4,14 @@ import 'package:groceries/components/button_creator.dart';
 import 'package:groceries/components/custom_checkbox.dart';
 import 'package:groceries/controllers/filters_controller.dart';
 import 'package:groceries/res/colors/app_color.dart';
-import 'package:groceries/view/beverages.dart';
+import 'package:groceries/view/navigation_bar.dart';
 
 class Filters extends StatelessWidget {
   const Filters({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final FiltersController filtersController = Get.put(FiltersController());
+    Get.put(FiltersController());
 
     return Scaffold(
       body: Column(
@@ -85,7 +85,7 @@ class Filters extends StatelessWidget {
                         padding: const EdgeInsets.only(bottom: 20),
                         child: ButtonCreator.createButton(
                             'Apply Filter', AppColor.greencolor, () {
-                          Get.to(BeveragesScreen());
+                          Get.to(const NavigationBaar(initialIndex: 2,));
                         }),
                       ),
                     ),

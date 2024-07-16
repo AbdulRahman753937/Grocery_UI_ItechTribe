@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:groceries/view/explore.dart';
 import 'package:groceries/view/home_screen.dart';
 import 'package:groceries/view/my_flutter_app_icons.dart';
 
 class NavigationBaar extends StatefulWidget {
-  const NavigationBaar(
-      {super.key,
-      });
+  const NavigationBaar({super.key, required int initialIndex});
 
   @override
   State<NavigationBaar> createState() => _ExploreState();
@@ -17,21 +14,21 @@ class _ExploreState extends State<NavigationBaar> {
   int index = 0;
 
   final screens = [
-    HomeScreen(),
-    Explore(),
-    Center(
+    const HomeScreen(),
+    const Explore(),
+    const Center(
       child: Text(
         'Cart',
         style: TextStyle(fontSize: 72),
       ),
     ),
-    Center(
+    const Center(
       child: Text(
         'Favourite',
         style: TextStyle(fontSize: 72),
       ),
     ),
-    Center(
+    const Center(
       child: Text(
         'Account',
         style: TextStyle(fontSize: 72),
@@ -45,9 +42,19 @@ class _ExploreState extends State<NavigationBaar> {
       body: screens[index],
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
-          indicatorColor: Colors.green.shade100,
-          labelTextStyle: MaterialStateProperty.all(
-              TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
+          indicatorColor: Colors.white,
+          labelTextStyle: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
+              return const TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Color.fromRGBO(83, 177, 117, 1));
+            }
+            return const TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black);
+          }),
+          iconTheme: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
+              return IconThemeData(color: Color.fromRGBO(83, 177, 117, 1));
+            }
+            return IconThemeData(color: Colors.black);
+          }),
         ),
         child: NavigationBar(
           backgroundColor: Colors.white,
