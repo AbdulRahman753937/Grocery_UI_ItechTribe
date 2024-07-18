@@ -44,158 +44,29 @@ class _BeveragesScreenState extends State<BeveragesScreen> {
             SizedBox(
               height: 20,
             ),
+            
             Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ProductCard(
-                            image: 'assets/images/diet_coke.png',
-                            title: 'Diet Coke',
-                            subtitle: '355ml, Price',
-                            price: '\$1.99',
-                            onTap: () {
-                              Get.to(ProductDetail());
-                            }),
-                        ProductCard(
-                            image: 'assets/images/sprite_can.png',
-                            title: 'Sprite Can',
-                            subtitle: '325ml, Price',
-                            price: '\$1.50',
-                            onTap: () {
-                              Get.to(ProductDetail());
-                            }),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ProductCard(
-                            image: 'assets/images/apple_grape_juice.png',
-                            title: 'Apple & Grape Juice',
-                            subtitle: '2L, Price',
-                            price: '\$15.99',
-                            onTap: () {
-                              Get.to(ProductDetail());
-                            }),
-                        ProductCard(
-                            image: 'assets/images/orange_juice.png',
-                            title: 'Orange Juice',
-                            subtitle: '2L, Price',
-                            price: '\$15.99',
-                            onTap: () {
-                              Get.to(ProductDetail());
-                            }),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ProductCard(
-                            image: 'assets/images/cola_can.png',
-                            title: 'Coca Cola Can',
-                            subtitle: '325ml, Price',
-                            price: '\$4.99',
-                            onTap: () {
-                              Get.to(ProductDetail());
-                            }),
-                        ProductCard(
-                            image: 'assets/images/pepsi_can.png',
-                            title: 'Pepsi Can',
-                            subtitle: '330ml, Price',
-                            price: '\$4.99',
-                            onTap: () {
-                              Get.to(ProductDetail());
-                            }),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ProductCard(
-                            image: 'assets/images/diet_coke.png',
-                            title: 'Diet Coke',
-                            subtitle: '355ml, Price',
-                            price: '\$1.99',
-                            onTap: () {
-                              Get.to(ProductDetail());
-                            }),
-                        ProductCard(
-                            image: 'assets/images/sprite_can.png',
-                            title: 'Sprite Can',
-                            subtitle: '325ml, Price',
-                            price: '\$1.50',
-                            onTap: () {
-                              Get.to(ProductDetail());
-                            }),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ProductCard(
-                            image: 'assets/images/apple_grape_juice.png',
-                            title: 'Apple & Grape Juice',
-                            subtitle: '2L, Price',
-                            price: '\$15.99',
-                            onTap: () {
-                              Get.to(ProductDetail());
-                            }),
-                        ProductCard(
-                            image: 'assets/images/orange_juice.png',
-                            title: 'Orange Juice',
-                            subtitle: '2L, Price',
-                            price: '\$15.99',
-                            onTap: () {
-                              Get.to(ProductDetail());
-                            }),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ProductCard(
-                            image: 'assets/images/cola_can.png',
-                            title: 'Coca Cola Can',
-                            subtitle: '325ml, Price',
-                            price: '\$4.99',
-                            onTap: () {
-                              Get.to(ProductDetail());
-                            }),
-                        ProductCard(
-                            image: 'assets/images/pepsi_can.png',
-                            title: 'Pepsi Can',
-                            subtitle: '330ml, Price',
-                            price: '\$4.99',
-                            onTap: () {
-                              Get.to(ProductDetail());
-                            }),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20,
-                    )
-                  ],
+              child: GridView(
+                shrinkWrap: true,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                    mainAxisExtent: 240),
+                children: List.generate(
+                  12,
+                  (index) => ProductCard(
+                      image: 'assets/images/diet_coke.png',
+                      title: 'Diet Coke',
+                      subtitle: '355ml, Price',
+                      price: '\$1.99',
+                      onTap: () {
+                        Get.to(ProductDetail());
+                      }),
                 ),
               ),
             ),
+            SizedBox(height: 20,)
           ],
         ),
       ),

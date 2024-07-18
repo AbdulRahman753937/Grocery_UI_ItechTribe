@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import "package:get/get.dart";
-import 'package:groceries/view/navigation_bar.dart';
+import 'package:groceries/view/beverages.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const NavigationBaar(initialIndex: 0,),
+      home: BeveragesScreen()
     );
   }
 }

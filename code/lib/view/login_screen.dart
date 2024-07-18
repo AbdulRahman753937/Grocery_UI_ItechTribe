@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/res/colors/app_color.dart';
-import 'package:groceries/view/home_screen.dart';
 import 'package:groceries/view/navigation_bar.dart';
 import 'package:groceries/components/button_creator.dart';
 import 'package:groceries/view/sign_up_screen.dart';
@@ -30,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
         print(data['token']);
         print('Logged in successfully');
 
-        Get.to(NavigationBaar(initialIndex: 0,));
+        Get.to(const NavigationBaar(initialIndex: 0,));
       } else {
         print('failed');
       }

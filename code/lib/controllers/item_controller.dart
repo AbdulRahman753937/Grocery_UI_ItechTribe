@@ -15,4 +15,5 @@ class ItemController extends GetxController {
   }
 
   double get totalPrice => itemCount.value * itemPrice;
+
 }

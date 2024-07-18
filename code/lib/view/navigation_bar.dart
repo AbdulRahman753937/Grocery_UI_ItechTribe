@@ -1,40 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:groceries/view/Account.dart';
+import 'package:groceries/view/Favorites.dart';
+import 'package:groceries/view/MyCart.dart';
 import 'package:groceries/view/explore.dart';
 import 'package:groceries/view/home_screen.dart';
 import 'package:groceries/view/my_flutter_app_icons.dart';
 
 class NavigationBaar extends StatefulWidget {
-  const NavigationBaar({super.key, required int initialIndex});
+  final int initialIndex;
+
+  const NavigationBaar({super.key, required this.initialIndex});
 
   @override
-  State<NavigationBaar> createState() => _ExploreState();
+  State<NavigationBaar> createState() => _NavigationBaarState();
 }
 
-class _ExploreState extends State<NavigationBaar> {
-  int index = 0;
+class _NavigationBaarState extends State<NavigationBaar> {
+  late int index;
 
   final screens = [
     const HomeScreen(),
     const Explore(),
-    const Center(
-      child: Text(
-        'Cart',
-        style: TextStyle(fontSize: 72),
-      ),
-    ),
-    const Center(
-      child: Text(
-        'Favourite',
-        style: TextStyle(fontSize: 72),
-      ),
-    ),
-    const Center(
-      child: Text(
-        'Account',
-        style: TextStyle(fontSize: 72),
-      ),
-    ),
+    const MyCart(),
+    const Favorites(),
+    const AccountScreen()
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    index = widget.initialIndex;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,14 +39,14 @@ class _ExploreState extends State<NavigationBaar> {
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
           indicatorColor: Colors.white,
-          labelTextStyle: WidgetStateProperty.resolveWith((states) {
-            if (states.contains(WidgetState.selected)) {
+          labelTextStyle: MaterialStateProperty.resolveWith((states) {
+            if (states.contains(MaterialState.selected)) {
               return const TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Color.fromRGBO(83, 177, 117, 1));
             }
             return const TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black);
           }),
-          iconTheme: WidgetStateProperty.resolveWith((states) {
-            if (states.contains(WidgetState.selected)) {
+          iconTheme: MaterialStateProperty.resolveWith((states) {
+            if (states.contains(MaterialState.selected)) {
               return IconThemeData(color: Color.fromRGBO(83, 177, 117, 1));
             }
             return IconThemeData(color: Colors.black);

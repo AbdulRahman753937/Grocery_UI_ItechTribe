@@ -46,47 +46,53 @@ class Filters extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 25),
-                        Text(
-                          'Categories',
-                          style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 25),
+                            Text(
+                              'Categories',
+                              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
+                            ),
+                            SizedBox(height: 25),
+                            buildCheckboxRow('Eggs', 0),
+                            SizedBox(height: 20),
+                            buildCheckboxRow('Noodles & Pasta', 1),
+                            SizedBox(height: 20),
+                            buildCheckboxRow('Chips & Crisps', 2),
+                            SizedBox(height: 20),
+                            buildCheckboxRow('Fast Food', 3),
+                            SizedBox(height: 30),
+                            Text(
+                              'Brand',
+                              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
+                            ),
+                            SizedBox(height: 25),
+                            buildCheckboxRow('Individual Collection', 4),
+                            SizedBox(height: 20),
+                            buildCheckboxRow('Cocola', 5),
+                            SizedBox(height: 20),
+                            buildCheckboxRow('Ifad', 6),
+                            SizedBox(height: 20),
+                            buildCheckboxRow('Kazi Farmas', 7),
+                            SizedBox(height: 20,)
+                          ],
                         ),
-                        SizedBox(height: 25),
-                        buildCheckboxRow('Eggs', 0),
-                        SizedBox(height: 20),
-                        buildCheckboxRow('Noodles & Pasta', 1),
-                        SizedBox(height: 20),
-                        buildCheckboxRow('Chips & Crisps', 2),
-                        SizedBox(height: 20),
-                        buildCheckboxRow('Fast Food', 3),
-                        SizedBox(height: 30),
-                        Text(
-                          'Brand',
-                          style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
-                        ),
-                        SizedBox(height: 25),
-                        buildCheckboxRow('Individual Collection', 4),
-                        SizedBox(height: 20),
-                        buildCheckboxRow('Cocola', 5),
-                        SizedBox(height: 20),
-                        buildCheckboxRow('Ifad', 6),
-                        SizedBox(height: 20),
-                        buildCheckboxRow('Kazi Farmas', 7),
-                      ],
+                      ),
                     ),
                     Center(
                       child: Padding(
                         padding: const EdgeInsets.only(bottom: 20),
                         child: ButtonCreator.createButton(
-                            'Apply Filter', AppColor.greencolor, () {
-                          Get.to(const NavigationBaar(initialIndex: 2,));
-                        }),
+                          'Apply Filter', 
+                          AppColor.greencolor, 
+                          () {
+                            Get.to(NavigationBaar(initialIndex: 3));
+                          }
+                        ),
                       ),
                     ),
                   ],
