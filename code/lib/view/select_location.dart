@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/res/colors/app_color.dart';
 import 'package:groceries/components/button_creator.dart';
-import 'package:groceries/view/login_screen.dart';
+import 'package:groceries/view/Login_Screen.dart';
 
 class SelectLocation extends StatefulWidget {
   const SelectLocation({super.key});

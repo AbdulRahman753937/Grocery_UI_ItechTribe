@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/res/colors/app_color.dart';
-import 'package:groceries/view/login_screen.dart';
+import 'package:groceries/view/Login_Screen.dart';
 import 'package:http/http.dart';
 
 class SignUpScreen extends StatefulWidget {

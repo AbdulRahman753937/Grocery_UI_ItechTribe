@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:groceries/components/card.dart';
 import 'package:groceries/controllers/item_controller.dart';
 import 'package:groceries/view/Filters.dart';
-import 'package:groceries/view/product_detail.dart';
+import 'package:groceries/view/Product_Details.dart';
 
 class BeveragesScreen extends StatefulWidget {
   const BeveragesScreen({super.key});

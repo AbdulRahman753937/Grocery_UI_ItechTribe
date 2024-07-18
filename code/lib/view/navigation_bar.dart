@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:groceries/view/Account.dart';
-import 'package:groceries/view/Favorites.dart';
-import 'package:groceries/view/MyCart.dart';
-import 'package:groceries/view/explore.dart';
-import 'package:groceries/view/home_screen.dart';
-import 'package:groceries/view/my_flutter_app_icons.dart';
+import 'package:groceries/view/Favourites.dart';
+import 'package:groceries/view/Cart.dart';
+import 'package:groceries/view/Explore.dart';
+import 'package:groceries/view/Home_Screen.dart';
+import 'package:groceries/view/FlutterIcons.dart';
 
 class NavigationBaar extends StatefulWidget {
   final int initialIndex;

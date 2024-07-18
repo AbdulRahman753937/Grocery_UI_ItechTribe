@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/components/card.dart';
 import 'package:groceries/res/colors/app_color.dart';
-import 'package:groceries/view/product_detail.dart';
 import 'package:groceries/components/main_header.dart';
+import 'package:groceries/view/Product_Details.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

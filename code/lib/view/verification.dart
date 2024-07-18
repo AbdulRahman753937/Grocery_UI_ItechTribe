@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:groceries/res/colors/app_color.dart';
-import 'package:groceries/view/select_location.dart';
+import 'package:groceries/view/Select_Location.dart';
 import 'package:pinput/pinput.dart';
 
 class VerifyNumber extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/components/explore_box.dart';
-import 'package:groceries/view/beverages.dart';
+import 'package:groceries/view/Beverages.dart';
 import 'package:groceries/components/main_header.dart';
 
 class Explore extends StatefulWidget {

@@ -4,7 +4,7 @@ import 'package:groceries/components/button_creator.dart';
 import 'package:groceries/components/cart_item.dart';
 import 'package:groceries/controllers/item_controller.dart';
 import 'package:groceries/res/colors/app_color.dart';
-import 'package:groceries/view/Order_accepted.dart';
+import 'package:groceries/view/Order_Accepted.dart';
 
 class MyCart extends StatefulWidget {
   const MyCart({super.key});
