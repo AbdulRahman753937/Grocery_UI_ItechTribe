@@ -4,6 +4,7 @@ import 'package:groceries/components/button_creator.dart';
 import 'package:groceries/components/cart_item.dart';
 import 'package:groceries/controllers/item_controller.dart';
 import 'package:groceries/res/colors/app_color.dart';
+import 'package:groceries/view/Order_accepted.dart';
 
 class MyCart extends StatefulWidget {
   const MyCart({super.key});
@@ -29,7 +30,7 @@ class _MyCartState extends State<MyCart> {
                   'My Cart',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 Container(
@@ -40,7 +41,7 @@ class _MyCartState extends State<MyCart> {
                           bottom: BorderSide(color: Colors.grey.shade400))),
                   child: Column(
                     children: [
-                      CartItem(
+                      const CartItem(
                           image: 'assets/images/bell_pepper_red.png',
                           title: 'Bell Pepper Red',
                           subtitle: '1kg, Price'),
@@ -52,7 +53,7 @@ class _MyCartState extends State<MyCart> {
                                 top: BorderSide(
                                     color: Colors.grey.shade400, width: 1))),
                       ),
-                      CartItem(
+                      const CartItem(
                           image: 'assets/images/egg_chicken_red.png',
                           title: 'Egg Chicken Red',
                           subtitle: '4Pcs, Price'),
@@ -64,7 +65,7 @@ class _MyCartState extends State<MyCart> {
                                 top: BorderSide(
                                     color: Colors.grey.shade400, width: 1))),
                       ),
-                      CartItem(
+                      const CartItem(
                           image: 'assets/images/bnana.png',
                           title: 'Orgnaic Bananas',
                           subtitle: '12kg, Price'),
@@ -76,7 +77,7 @@ class _MyCartState extends State<MyCart> {
                                 top: BorderSide(
                                     color: Colors.grey.shade400, width: 1))),
                       ),
-                      CartItem(
+                      const CartItem(
                           image: 'assets/images/ginger.png',
                           title: 'Ginger ',
                           subtitle: '250gm, Price'),
@@ -91,7 +92,7 @@ class _MyCartState extends State<MyCart> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 GestureDetector(
@@ -99,232 +100,236 @@ class _MyCartState extends State<MyCart> {
                     Get.to(showModalBottomSheet(
                       context: context,
                       builder: (context) {
-                        return Container(
-                          height: 530,
-                          width: double.infinity,
-                          padding: EdgeInsets.all(16.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Checkout',
-                                    style: TextStyle(
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                  Container(
-                                      height: 15,
-                                      width: 15,
-                                      child:
-                                          Image.asset('assets/icons/cross.png'))
-                                ],
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 20, bottom: 20),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      border: Border(
-                                    top: BorderSide(
-                                        color: Colors.grey.shade400, width: 1),
-                                  )),
-                                ),
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Delivery',
-                                    style: TextStyle(
-                                        color: Colors.black.withOpacity(.5),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                  Row(
-                                    children: [
-                                      Text(
-                                        'Select Method',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                      SizedBox(
+                        return Expanded(
+                          child: Container(
+                            height: 530,
+                            width: double.infinity,
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    const Text(
+                                      'Checkout',
+                                      style: TextStyle(
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                    Container(
+                                        height: 15,
                                         width: 15,
-                                      ),
-                                      Image.asset(
-                                          'assets/icons/forward_icon.png')
-                                    ],
-                                  )
-                                ],
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 20, bottom: 20),
-                                child: Container(
-                                  height: 1,
-                                  decoration: BoxDecoration(
-                                      border: Border(
-                                    top: BorderSide(
-                                        color: Colors.grey.shade400, width: 1),
-                                  )),
+                                        child:
+                                            Image.asset('assets/icons/cross.png'))
+                                  ],
                                 ),
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Payment',
-                                    style: TextStyle(
-                                        color: Colors.black.withOpacity(.5),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 20, bottom: 20),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        border: Border(
+                                      top: BorderSide(
+                                          color: Colors.grey.shade400, width: 1),
+                                    )),
                                   ),
-                                  Row(
-                                    children: [
-                                      Image.asset('assets/icons/card.png'),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Image.asset(
-                                          'assets/icons/forward_icon.png')
-                                    ],
-                                  )
-                                ],
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 20, bottom: 20),
-                                child: Container(
-                                  height: 1,
-                                  decoration: BoxDecoration(
-                                      border: Border(
-                                    top: BorderSide(
-                                        color: Colors.grey.shade400, width: 1),
-                                  )),
                                 ),
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Promo Code',
-                                    style: TextStyle(
-                                        color: Colors.black.withOpacity(.5),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                  Row(
-                                    children: [
-                                      Text(
-                                        'Pick Discount',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Image.asset(
-                                          'assets/icons/forward_icon.png')
-                                    ],
-                                  )
-                                ],
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 20, bottom: 20),
-                                child: Container(
-                                  height: 1,
-                                  decoration: BoxDecoration(
-                                      border: Border(
-                                    top: BorderSide(
-                                        color: Colors.grey.shade400, width: 1),
-                                  )),
-                                ),
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Total Cost',
-                                    style: TextStyle(
-                                        color: Colors.black.withOpacity(.5),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                  Row(
-                                    children: [
-                                      Text(
-                                        '\$13.97',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
-                                      Image.asset(
-                                          'assets/icons/forward_icon.png')
-                                    ],
-                                  )
-                                ],
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 20, bottom: 20),
-                                child: Container(
-                                  height: 1,
-                                  decoration: BoxDecoration(
-                                      border: Border(
-                                    top: BorderSide(
-                                        color: Colors.grey.shade400, width: 1),
-                                  )),
-                                ),
-                              ),
-                              Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Text('By continuing you agree to our'),
-                                      SizedBox(width: 5),
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      GestureDetector(
-                                        child: Text(
-                                          'Terms ',
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Delivery',
+                                      style: TextStyle(
+                                          color: Colors.black.withOpacity(.5),
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                    Row(
+                                      children: [
+                                        const Text(
+                                          'Select Method',
                                           style: TextStyle(
-                                              fontWeight: FontWeight.bold),
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w500),
                                         ),
-                                      ),
-                                      Text('and'),
-                                      SizedBox(width: 5),
-                                      GestureDetector(
-                                        child: Text(
-                                          'Conditions',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold),
+                                        const SizedBox(
+                                          width: 15,
                                         ),
-                                      ),
-                                    ],
+                                        Image.asset(
+                                            'assets/icons/forward_icon.png')
+                                      ],
+                                    )
+                                  ],
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 20, bottom: 20),
+                                  child: Container(
+                                    height: 1,
+                                    decoration: BoxDecoration(
+                                        border: Border(
+                                      top: BorderSide(
+                                          color: Colors.grey.shade400, width: 1),
+                                    )),
                                   ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 25,
-                              ),
-                              ButtonCreator.createButton(
-                                  'Place Order', AppColor.greencolor, () {})
-                            ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Payment',
+                                      style: TextStyle(
+                                          color: Colors.black.withOpacity(.5),
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Image.asset('assets/icons/card.png'),
+                                        const SizedBox(
+                                          width: 15,
+                                        ),
+                                        Image.asset(
+                                            'assets/icons/forward_icon.png')
+                                      ],
+                                    )
+                                  ],
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 20, bottom: 20),
+                                  child: Container(
+                                    height: 1,
+                                    decoration: BoxDecoration(
+                                        border: Border(
+                                      top: BorderSide(
+                                          color: Colors.grey.shade400, width: 1),
+                                    )),
+                                  ),
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Promo Code',
+                                      style: TextStyle(
+                                          color: Colors.black.withOpacity(.5),
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                    Row(
+                                      children: [
+                                        const Text(
+                                          'Pick Discount',
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                        const SizedBox(
+                                          width: 15,
+                                        ),
+                                        Image.asset(
+                                            'assets/icons/forward_icon.png')
+                                      ],
+                                    )
+                                  ],
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 20, bottom: 20),
+                                  child: Container(
+                                    height: 1,
+                                    decoration: BoxDecoration(
+                                        border: Border(
+                                      top: BorderSide(
+                                          color: Colors.grey.shade400, width: 1),
+                                    )),
+                                  ),
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Total Cost',
+                                      style: TextStyle(
+                                          color: Colors.black.withOpacity(.5),
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                    Row(
+                                      children: [
+                                        const Text(
+                                          '\$13.97',
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                        const SizedBox(
+                                          width: 15,
+                                        ),
+                                        Image.asset(
+                                            'assets/icons/forward_icon.png')
+                                      ],
+                                    )
+                                  ],
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 20, bottom: 20),
+                                  child: Container(
+                                    height: 1,
+                                    decoration: BoxDecoration(
+                                        border: Border(
+                                      top: BorderSide(
+                                          color: Colors.grey.shade400, width: 1),
+                                    )),
+                                  ),
+                                ),
+                                Column(
+                                  children: [
+                                    const Row(
+                                      children: [
+                                        Text('By continuing you agree to our'),
+                                        SizedBox(width: 5),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        GestureDetector(
+                                          child: const Text(
+                                            'Terms ',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ),
+                                        const Text('and'),
+                                        const SizedBox(width: 5),
+                                        GestureDetector(
+                                          child: const Text(
+                                            'Conditions',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 25,
+                                ),
+                                ButtonCreator.createButton(
+                                    'Place Order', AppColor.greencolor, () {
+                                      Get.to(const OrderAccepted());
+                                    })
+                              ],
+                            ),
                           ),
                         );
                       },
@@ -341,10 +346,10 @@ class _MyCartState extends State<MyCart> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             width: 50,
                           ),
-                          Text(
+                          const Text(
                             'Go to Checkout',
                             style: TextStyle(
                                 fontFamily: 'Montserrat',
@@ -358,7 +363,7 @@ class _MyCartState extends State<MyCart> {
                             decoration: BoxDecoration(
                                 color: Colors.black.withOpacity(.1),
                                 borderRadius: BorderRadius.circular(5)),
-                            child: Center(
+                            child: const Center(
                                 child: Text(
                               '\$12.99',
                               style: TextStyle(

@@ -16,7 +16,7 @@ class _OrderAcceptedState extends State<OrderAccepted> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 100, bottom: 30),
+        padding: const EdgeInsets.only(top: 150, bottom: 30),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -28,12 +28,12 @@ class _OrderAcceptedState extends State<OrderAccepted> {
                     padding: const EdgeInsets.only(right: 20.0),
                     child: Image.asset('assets/images/order_placed.png'),
                   ),
-                  Text(
+                  const Text(
                     'Your Order has been\naccepted',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Text(
                     "Your item has been placed and is on\nit's way to being processed",
                     textAlign: TextAlign.center,
@@ -45,14 +45,14 @@ class _OrderAcceptedState extends State<OrderAccepted> {
               Column(
                 children: [
                   ButtonCreator.createButton('Track Order', AppColor.greencolor, () {
-                    Get.to(NavigationBaar(initialIndex: 4));
+                    Get.to(const NavigationBaar(initialIndex: 4));
                   }),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   TextButton(
                     onPressed: () {
-                      Get.to(NavigationBaar(initialIndex: 0));
+                      Get.to(const NavigationBaar(initialIndex: 0));
                     },
-                    child: Text(
+                    child: const Text(
                       'Back to home',
                       style: TextStyle(fontSize: 16, color: Colors.black),
                     ),

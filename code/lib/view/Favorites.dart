@@ -79,7 +79,7 @@ class _FavoritesState extends State<Favorites> {
                 height: 20,
               ),
               ButtonCreator.createButton('Add All to Cart', AppColor.greencolor, (){
-                Get.to(const NavigationBaar(initialIndex: 2));
+                Get.to(NavigationBaar(initialIndex: 2));
               })
             ],
           ),
