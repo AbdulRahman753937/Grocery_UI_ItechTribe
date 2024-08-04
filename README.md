@@ -1,4 +1,4 @@
-# grocery_ui_itechtribe
+# groceries
 
 A new Flutter project.
 
